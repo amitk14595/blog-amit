@@ -13,7 +13,7 @@
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg fixed-top text-left">
   <div class="container">
-    <a href="/" class="navbar-brand font-weight-bold" style="cursor:pointer;">{{site.title}}</a>
+    <a href="/blog-amit/" class="navbar-brand font-weight-bold" style="cursor:pointer;">{{site.title}}</a>
     <button class="navbar-toggler navbar-toggler-right"type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">              
@@ -23,13 +23,13 @@
               <a class="nav-link" href="{{ '/portfolio/' | relative_url }}" class="{% if current[1] == 'portfolio' %}active{% endif %}">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ '/blog/' | prepend:site.baseurl }}" class="{% if current[1] == 'blog' %}active{% endif %}">Blogs</a>
+              <a class="nav-link" href="{{ '/blog/' |  relative_url  }}" class="{% if current[1] == 'blog' %}active{% endif %}">Blogs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ '/downloads/AMIT CCNP2020_MAY.pdf' | prepend:site.baseurl }}" class="{% if current[1] == 'downloads' %}active{% endif %}">Resume</a>
+              <a class="nav-link" href="{{ '/downloads/AMIT CCNP2020_MAY.pdf' |  relative_url }}" class="{% if current[1] == 'downloads' %}active{% endif %}">Resume</a>
             </li>
             <li class="nav-item" style="float: right"; >
-              <a class="nav-link" href="{{ '/contactme/' | prepend:site.baseurl }}" class= "{% if current[1] == 'contactme' %}active{% endif %}">Contact Me</a>
+              <a class="nav-link" href="{{ '/contactme/' |  relative_url }}" class= "{% if current[1] == 'contactme' %}active{% endif %}">Contact Me</a>
             </li>            
           </ul>        
         </div>  
