@@ -6,7 +6,7 @@ tagline: This is a Blog Page where all the blogs listed in organized manner.
 
 <div class="row text-center" data-aos="fade">
   <div class="col-12">
-    <p>All blog posts are <a href="{{ '/blog/archives/' | prepend:site.baseurl}}"> <b> here </b></a></p>
+    <p>All blog posts are <a href="{{ '/blog/archives/' | relative_url}}"> <b> here </b></a></p>
   </div>
 </div>
 
@@ -17,13 +17,13 @@ tagline: This is a Blog Page where all the blogs listed in organized manner.
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 d-flex align-items-stretch">
 
     <div class="card bg-light mb-3 text-dark shadow p-3 mb-5 bg-white rounded"  style="width: 20rem;">
-      <a href="{{ post.url | prepend:site.baseurl}}"><img class="card-img-top" src="{{ post.image | relative_url}}" alt="Card image cap"></a>
+      <a href="{{ post.url | relative_url}}"><img class="card-img-top" src="{{ post.image | relative_url}}" alt="Card image cap"></a>
       <div class="card-body">
         <h5 class="card-title">{{ post.title }}</h5>
         <p class="card-text">{{ post.date | date_to_string }}</p>
       </div>
         <div class="card-footer">
-        <a href="{{ post.url | prepend:site.baseurl}}">
+        <a href="{{ post.url | relative_url}}">
           <button type="button" class="btn btn-outline-dark" >Read</button>
         </a>
       </div>
@@ -39,7 +39,7 @@ tagline: This is a Blog Page where all the blogs listed in organized manner.
     {% if paginator.total_pages > 1 %}
     <ul class="pagination justify-content-center">
       {% if paginator.previous_page %}
-        <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
+        <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | relative_url | replace: '//', '/' }}">&laquo; Prev</a></li>
       {% else %}
         <li class="page-item disabled">
           <a class="page-link" href="#" tabindex="-1">&laquo; Previous</a>
@@ -52,14 +52,14 @@ tagline: This is a Blog Page where all the blogs listed in organized manner.
             <a class="page-link" href="#" tabindex="-1">{{ page }}</a>
           </li>
         {% elsif page == 1 %}
-          <li class="page-item"><a class="page-link" href="{{ site.url }}{{ site.baseurl }}/blog/">{{ page }}</a></li>
+          <li class="page-item"><a class="page-link" href="{{ site.url }} | relative_url/blog/">{{ page }}</a></li>
         {% else %}
-          <li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+          <li class="page-item"><a class="page-link" href="{{ site.paginate_path | relative_url | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
         {% endif %}
       {% endfor %}
 
       {% if paginator.next_page %}
-        <li class="page-item">  <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
+        <li class="page-item">  <a class="page-link" href="{{ paginator.next_page_path | relative_url | replace: '//', '/' }}">Next &raquo;</a></li>
       {% else %}
       <li class="page-item disabled">
         <a class="page-link" href="#" tabindex="-1">Next &raquo;</a>
