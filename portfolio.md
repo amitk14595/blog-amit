@@ -12,7 +12,7 @@ description: Welcome to my small space on web. Below are some of my qualitites t
 
   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex align-items-stretch">
       <div class="card bg-light mb-3 text-dark" style="border-radius: 0;">
-        <a href="{{ '/clique/' | prepend:site.baseurl }}"><img class="card-img-top" src="{{ 'public/camera.svg' | relative_url }}" alt="clique" style="border-radius: 0;"></a>
+        <a href="{{ '/clique/' | relative_url }}"><img class="card-img-top" src="{{ 'public/camera.svg' | relative_url }}" alt="clique" style="border-radius: 0;"></a>
         <div class="card-body">
           <h5 class="card-title">Clique</h5>
         </div>
@@ -21,7 +21,7 @@ description: Welcome to my small space on web. Below are some of my qualitites t
 
   <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex align-items-stretch">
       <div class="card bg-light mb-3 text-dark" style="border-radius: 0;">
-        <a href="{{ '/arts/' | prepend:site.baseurl }}"><img class="card-img-top" src="{{ 'public/img/sketch.svg' | relative_url }}" alt="Sketching" style="border-radius: 0;"></a>
+        <a href="{{ '/arts/' | relative_url }}"><img class="card-img-top" src="{{ 'public/img/sketch.svg' | relative_url }}" alt="Sketching" style="border-radius: 0;"></a>
         <div class="card-body">
           <h5 class="card-title">Arts and Design</h5>
         </div>
