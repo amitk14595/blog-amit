@@ -1,17 +1,4 @@
-/*
- *  ___
- * /\_ \
- * \//\ \      __      ___   __  __    ___     ___
- *   \ \ \   /'__`\  /' _ `\/\ \/\ \  / __`\ /' _ `\
- *    \_\ \_/\ \_\.\_/\ \/\ \ \ \_\ \/\ \_\ \/\ \/\ \
- *    /\____\ \__/.\_\ \_\ \_\/`____ \ \____/\ \_\ \_\
- *    \/____/\/__/\/_/\/_/\/_/`/___/> \/___/  \/_/\/_/
- *                               /\___/
- *                               \/__/
- *
- * Designed, built, and released under MIT license by @mdo. Learn more at
- * https://github.com/poole/lanyon.
- */
+
 
 
 /*
@@ -127,7 +114,7 @@ font-style: PT Sans;
 
 #jumbotron-bg{
     background-color: #107a85;
-    background-image: url("/public/images/background-pc.jpg")
+    background-image: "{{ url("/public/images/background-pc.jpg") | relative_url }}"
     /*background: linear-gradient(rgba(255, 255, 255, 0.68), #ddeff3); */
 
     /* background-image: url("/public/images/banner_homepage.svg"); */
@@ -539,7 +526,7 @@ a.sidebar-nav-item:focus {
 #posts{
     background-color: #107a85;
     background:linear-gradient(rgba(75, 194, 225, 0.68), #f8f9fa);
-    background-image: linear-gradient(rgba(252, 252, 252, 0.6), rgba(9, 102, 132, 0.6)), url("/public/images/");
+    background-image: linear-gradient(rgba(252, 252, 252, 0.6), rgba(9, 102, 132, 0.6)), "{{url("/public/images/") | relative_url}}";
 }
 
 #markdown-toc{
