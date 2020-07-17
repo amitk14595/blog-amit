@@ -1,0 +1,71 @@
+# Dependencies
+markdown: kramdown
+highlighter: rouge
+
+# Permalinks
+permalink:        pretty
+# relative_permalinks: true
+
+
+# Setup
+title:               AMIT BLOGS
+tagline:             ''
+description:         ''
+url:                 
+baseurl:             "blog-amit"
+
+paginate:            6
+paginate_path:    /blog/page:num/
+
+
+
+# About/contact
+author:
+  name:              Amit Kumar
+  url:               https://twitter.com/mdo
+  email:             kumar.amit14595@gmail.com
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-avatar
+  - jemoji
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-admin
+
+# Social Media
+twitter_username: singhamit14595
+github_username: amitk14595
+linkedin_username: amit-kumar-737021114
+facebook_username: amit.k.singh.1800
+quora_username: 
+instagram_username: yoursamit.14595
+
+# Custom vars
+version:             1.1.0
+google_analytics_id: #UA-XXXX-Y
+
+#Details
+dob: 19th October 1996
+location: Vashi, Navi Mumbai, Maharastra
+contact: +91-8210431765
+email: kumar.amit14595@gmail.com
+
+#Gallery
+clique:
+  - public/img/clique/1.jfif
+  - public/img/clique/2.jpg
+  - public/img/clique/3.jpg
+  - public/img/clique/4.jpg
+  - public/img/clique/5.jpg
+  - public/img/clique/6.jpg
+
+#Arts & Design
+arts:
+  - public/img/arts/1.png
+  - public/img/arts/2.png
+  - public/img/arts/3.png

@@ -1,0 +1,13 @@
+---
+layout: page
+title: Arts & Design
+description: Few of my clicked photographs
+image_path: localhost:4000/public/img/arts/1.png
+---
+
+<div id="gallery" style="display:none;">
+    {% for image in site.arts %}
+    <img alt="" src="{{ image.image_path}}"
+        data-image="{{ image | relative_url }}">
+    {% endfor %}
+</div>

@@ -1,0 +1,29 @@
+---
+layout: page
+title: "Page not found"
+permalink: 404.html
+---
+
+<div class="page">
+  <div class="container">
+    <div class="row" data-aos="fade">
+      <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"></div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+          <img src="{{ 'public/images/404.svg' | relative_url }}" alt="Code" class="img-fluid">
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3"></div>
+    </div>
+    <div class="row" style="margin-top: 5%;">
+      <div class="col">
+        <p class="lead" style="font-family: PT Sans; font-style: italic;">Sorry, The link is broken or page has been removed.</p>
+        <p class="lead" style="font-family: PT Sans; font-style: italic;">Try these pages instead- </p>
+        <ul>
+        	<li> <a href="{{ site.url }}"> Home </a> </li> 
+        	<li> <a href="{{ site.baseurl }}/blog"> Blog </a></li>
+        	<li> <a href="{{ site.baseurl }}/portfolio"> Portfolio </a></li> 
+
+         
+      </div>
+    </div>
+  </div>
+</div>

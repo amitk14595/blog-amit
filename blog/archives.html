@@ -1,0 +1,35 @@
+---
+layout: page
+title: Archives
+tagline: Here all the blogs are listed in date wise
+---
+
+<div class="container">
+  <div class="row mb-2">
+    <div class="col-4">
+      <div class="text-center mb-3"> <a href="{{ site.baseurl }}/blog/tag"><button type="submit" class="btn btn-success">Tag Wise</button></a></div>
+    </div>
+    <div class="col-4">
+      <div class="text-center mb-3"><a href="{{ site.baseurl }}/blog/year"><button type="submit" class="btn btn-success">Year Wise</button></a></div>
+    </div>
+    <div class="col-4">
+      <div class="text-center mb-3"><a href="{{ site.baseurl }}/blog/allposts"><button type="submit" class="btn btn-success">All Posts</button></a></div>
+    </div>
+<table class="table">
+  <thead class="thead-dark text-center">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Post Title</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{% for post in site.posts %}
+    <tr>
+      <td>{{ post.date | date_to_string }}</td>
+      <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</div>

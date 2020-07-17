@@ -1,0 +1,26 @@
+---
+layout: page
+title: All Posts
+tagline: Here all the blogs are listed in date wise
+---
+
+{% for post in site.posts %}
+<section id="resume" class="resume">
+  <div class="container shadow p-3 mb-5 bg-white rounded" data-aos="fade-up">
+
+  <article>
+  	<div class="section-title text-center mb-2">
+    <h2>
+      	<a href="{{ post.url }}"> 
+        {{ post.title }}
+      </a>
+    </h2>	
+    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
+    </div>
+    {{ post.content }}
+ </article>
+   </div>
+</section>
+<hr>
+
+{% endfor %}

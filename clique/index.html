@@ -1,0 +1,14 @@
+---
+layout: page
+title: Clique
+description: Few of my clicked photographs
+image_path: localhost:4000/public/img/clique/1.jfif
+---
+
+<div id="gallery" style="display:none;">
+    {% for image in site.clique %}
+    <img alt="" src="{{ image.image_path}}"
+        data-image="{{ image | relative_url }}">
+    {% endfor %}
+</div>
+

@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<!-- Post Heading -->
+<div class="container">
+<div class="jumbotron-fluid section text-white text-center" id="pages">
+  <div class="container section">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="post">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <span>{{ page.date | date_to_string }}</span>
+        {% assign num_words = content | number_of_words %}
+        {% assign minutes = num_words | divided_by: 180 %}
+        {% if num_words < 360 %}
+          <span style="margin-left: 1%"><i class="fas fa-eye"></i> 1 min read</span>
+        {% else %}
+          <span style="margin-left: 1%"><i class="fas fa-eye"></i> {{ num_words | divided_by:180 }} mins read</span>
+        {% endif %}
+        <br>
+        <div style="padding-top: 20px;">
+          {% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/blog/tag/#{{ tag | slugify }}" class="button"> <i class="fas fa-tags" aria-hidden="true"></i> {{ tag }} </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--Post content--> 
+<div class="">
+  <div class="container" data-aos="fade-up" id="post-content">
+    {{ content }} 
+  <hr>
+
+ <!-- Related Post --> 
+<div class="relatedPosts">
+
+<h4>You May Also Enjoy</h4>
+
+{% assign maxRelated = 4 %}
+{% assign minCommonTags =  1 %}
+{% assign maxRelatedCounter = 0 %}
+
+  {% for post in site.posts %}
+
+    {% assign sameTagCount = 0 %}
+    {% assign commonTags = '' %}
+
+    {% for tag in post.tags %}
+      {% if post.url != page.url %}
+        {% if page.tags contains tag %}
+          {% assign sameTagCount = sameTagCount | plus: 1 %}
+          {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
+          {% assign commonTags = commonTags | append: tagmarkup %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if sameTagCount >= minCommonTags %}
+      <div>
+      <h5><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}{{ commonTags }}</a></h5>
+      </div>
+      {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+      {% if maxRelatedCounter >= maxRelated %}
+        {% break %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</div>
+
+  <!-- Post Comments -->
+    {% if page.comments %}
+      {% include disqus.html %}
+    {% endif %}
+    
+  </div>
+</div>
+<div style="margin-top: 3%;"></div>
+
