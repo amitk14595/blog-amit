@@ -20,7 +20,7 @@
           <ul class="navbar-nav ml-auto">
             {% assign current = page.url | downcase | split: '/' %}
             <li class="nav-item">
-              <a class="nav-link" href="{{ '/portfolio/' | prepend:site.baseurl }}" class="{% if current[1] == 'portfolio' %}active{% endif %}">Portfolio</a>
+              <a class="nav-link" href="{{ '/portfolio/' | relative_url }}" class="{% if current[1] == 'portfolio' %}active{% endif %}">Portfolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ '/blog/' | prepend:site.baseurl }}" class="{% if current[1] == 'blog' %}active{% endif %}">Blogs</a>
