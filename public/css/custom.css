@@ -114,7 +114,7 @@ font-style: PT Sans;
 
 #jumbotron-bg{
     background-color: #107a85;
-    background-image: url("/public/images/background-pc.jpg" | relative_url );
+    background-image: url("{{'/public/images/background-pc.jpg' | relative_url }}");
     /*background: linear-gradient(rgba(255, 255, 255, 0.68), #ddeff3); */
 
     /* background-image: url("/public/images/banner_homepage.svg"); */
