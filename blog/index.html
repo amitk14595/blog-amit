@@ -52,7 +52,7 @@ tagline: This is a Blog Page where all the blogs listed in organized manner.
             <a class="page-link" href="#" tabindex="-1">{{ page }}</a>
           </li>
         {% elsif page == 1 %}
-          <li class="page-item"><a class="page-link" href="{{ site.url }} | relative_url/blog/">{{ page }}</a></li>
+          <li class="page-item"><a class="page-link" href="{{ site.url }} | '/blog/' | relative_url">{{ page }}</a></li>
         {% else %}
           <li class="page-item"><a class="page-link" href="{{ site.paginate_path | relative_url | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
         {% endif %}
